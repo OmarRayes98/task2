@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+}
+
+.footer_section {
+    background: var(--black-color);
+    color: var(--white-color);
+    padding: 2rem;
+}
+
+.footer_section p {
+    margin-left: 8rem;
+}
+
+@media screen and (max-width : 768px) {
+    footer {
+        margin-top: 10rem;
+    }
+
+    .footer_section p {
+        margin-left: 2rem;
+        text-align: center;
+        line-height: 400%;
+    }
+}

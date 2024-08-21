@@ -1,0 +1,93 @@
+.upperbar{
+    border-bottom: 1.5px solid rgba(139, 122, 126, 0.3);
+}
+
+.upperbar__row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.upperbar__icons,.upperbar__info{
+width: 100%;
+}
+
+.upperbar__info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.upperbar__info .upperbar__content{
+display: flex;
+align-items: center;
+}
+
+.upperbar__info .upperbar__content::after{
+    content: "";
+    border-right: 2px solid rgba(139, 122, 126, 0.3);
+    height: 23px;
+    margin: 0px 20px;
+}
+
+
+/*just the end of element does not need seperate line*/
+.upperbar__info .upperbar__content:last-child::after{
+    display: none;
+}
+
+.upperbar__info .upperbar__content span{
+    font-size: 0.85rem;
+    color:#8b7a7e;
+    margin-left: 12px;
+    text-wrap: nowrap;
+
+}
+
+.upperbar__info .upperbar__content svg{
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+.upperbar__icons{
+display: flex;
+justify-content: center;
+}
+
+.upperbar__icons svg{
+color: var(--white-color);
+background: #cdcdcd;
+border-radius: 50px;
+padding: 8px;
+margin-left: 10px;
+}
+
+
+
+@media  (min-width:768px) {
+    
+
+    .upperbar__info{
+        flex-grow: 1;
+        max-width: 100%;
+        flex-basis: 0;
+        justify-content: flex-start;
+        margin-bottom: 0px;
+
+    }
+    
+    .upperbar__icons{
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+       justify-content: flex-end;
+    }
+}
+
+@media (max-width:450px){
+    .upperbar{
+        display: none;
+    }
+}

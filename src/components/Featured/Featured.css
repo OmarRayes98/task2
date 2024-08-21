@@ -1,0 +1,138 @@
+.featured{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+    padding: 100px 0px;
+}
+
+.featured__image{
+    position: relative;
+    height: 75%;
+}
+.featured__image > img {
+    width: 100%;
+    height: 100%;
+}
+
+.featured__image_icon{
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    left: -40px;
+    bottom: -35px;
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*content*/
+
+.featured__content_title{
+color: var(--section-titile-color);
+font-weight: 500;
+font-size: 0.8rem;
+}
+.featured__content_title::before{
+    content: "|";
+    color: var(--section-titile-color);
+    font-weight: 500;
+    width: 30px;
+}
+
+.featured__content_parent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.featured__content_info{
+    display: flex;
+    flex-direction: column;
+    color: var(--black-color);
+    margin: 10px 0px 25px 0px;
+    font-size: clamp(2rem, -1.5rem + 8vw, 3rem);
+
+}
+
+.featured__content_accordion{
+    background-color: var(--background-color);
+    border-radius: 8px;
+    margin-top: 70px;
+
+}
+
+.featured__content_accordion-item dt{
+    padding: 15px 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    
+}
+
+.featured__content_accordion-item dt a{
+   text-decoration: none;
+   color: var(--black-color);
+   font-weight: 500;
+}
+
+/*info card*/
+.featured__info_box{
+    background-color: var(white-color);
+    box-shadow: var(--shadow-color);
+}
+.featured__info_card{
+    padding: 35px 20px 0px 20px;
+    border-radius: 8px;
+}
+
+.fetured__item{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    padding-bottom: 35px;
+}
+
+.featured__info_card:last-child .fetured__item{
+    border-bottom: none;
+}
+
+.fetured__item_info p{
+    margin: 0px;
+    color: rgba(128, 128, 128, 0.5);
+    font-size: 0.9rem;
+
+
+}
+
+.fetured__item_info p:first-child, .fetured__item_img p{
+    margin: 0px 0px 5px 0px;
+    color: rgba(128, 128, 128, 0.5);
+    font-size: 0.9rem;
+
+}
+
+@media (max-width:768px){
+    
+    .featured{
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 0px;
+        row-gap: 20px;
+        width: 100%;
+    }
+
+    .featured__image{
+        height: 90%;
+    }
+    .featured__image_icon {
+        left: -4px;
+        padding: 10px;
+}
+
+.featured__image_icon img{
+height: 50px;
+width: 50px;
+}
+}

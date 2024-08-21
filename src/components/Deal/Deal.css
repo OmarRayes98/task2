@@ -1,0 +1,140 @@
+.Deal {
+    background: #fafafa;
+    padding: 4rem;
+}
+
+.Deal p,.Deal h6{
+    margin: 0px;
+    padding: 0px;
+}
+
+.Deal__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.Deal__content_titlespan {
+    color: var(--main-color);
+}
+
+.Deal__content_titlespan::before {
+    content: "|";
+}
+
+.Deal__content_titleh3 {
+    max-width: 300px;
+}
+
+.Deal__btns {
+    display: flex;
+    gap: 24px;
+
+}
+
+.Deal__btns a:first-child {
+background-color: var(--main-color);
+}
+
+
+
+.Deal__container {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-block: 4rem;
+}
+
+.Deal__container_left {
+    box-shadow: var(--shadow-color);
+    border-radius: 8px;
+}
+
+.Deal__container_left .items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 20px 40px;
+}
+
+.Deal__container_left .items .item{
+    display: flex;
+    padding-bottom: 32px;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.Deal__container_left .items .item h6 {
+    font-size: 1.2rem;
+}
+
+.Deal__container_left .items .item p {
+    color: #a7a7a7;
+}
+
+.Deal__container_left .items .item:last-child{
+    border-bottom: none;
+}
+
+
+.Deal__container_middle img {
+    width: 460px;
+}
+
+.Deal__container_right {
+    max-width: 300px;
+}
+
+.Deal__container_right h6 {
+    font-size: 1.2rem;
+}
+
+.Deal__container_right p {
+    color: rgb(101, 101, 101);
+    margin-block: 32px;
+    line-height: 175%;
+}
+
+@media screen and (max-width : 768px) {
+    .Deal__content_title{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .Deal__btns {
+        display: flex;
+        gap: 8px;
+        margin-top: 32px;
+        flex-direction: column;
+    }
+
+    .Deal__btns button .contenaire span {
+        padding-inline: 16px;
+    }
+
+    .Deal__container_left .items .item{
+        padding-block: 24px;
+    }
+
+    .Deal__container_middle img {
+        max-width: 100%;
+    }
+
+    .Deal__container_right {
+        max-width: 100%;
+        padding-inline: 32px;
+    }
+}
